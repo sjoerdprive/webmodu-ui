@@ -1,0 +1,25 @@
+@import "/src/styles/variables";
+
+.field {
+  display: flex;
+  gap: $spacing-1;
+}
+
+.input {
+}
+
+.top {
+  flex-direction: column;
+}
+
+.right {
+  flex-direction: row-reverse;
+}
+
+.bottom {
+  flex-direction: column-reverse;
+}
+
+.left {
+  flex-direction: row;
+}

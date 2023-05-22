@@ -1,0 +1,30 @@
+@import "/src/styles/variables";
+@layer base {
+  .dropDown {
+    position: relative;
+  }
+
+  .menu {
+    position: absolute;
+    display: block;
+    width: max-content;
+    bottom: -$spacing-1;
+    transform: translateY(100%);
+    border-radius: $border-radius;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px 0px rgba(40, 40, 40, 0.1);
+
+    button {
+      &:hover {
+        background-color: $grey-1;
+      }
+
+      &:focus {
+        background-color: $grey-5;
+        color: $white;
+
+        outline: none;
+      }
+    }
+  }
+}

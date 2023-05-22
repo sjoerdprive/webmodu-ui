@@ -1,0 +1,12 @@
+@import "/src/styles/variables";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-2;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+}

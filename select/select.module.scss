@@ -1,0 +1,24 @@
+@import "/src/styles/variables";
+
+.select {
+}
+
+.contextMenu {
+}
+
+.listButton {
+  background-color: $white;
+  padding: $spacing-2;
+  text-align: start;
+
+  &:hover {
+    background-color: $grey-1;
+  }
+
+  &:focus {
+    background-color: $grey-5;
+    color: $white;
+
+    outline: none;
+  }
+}

@@ -1,0 +1,18 @@
+@import "/src/styles/variables";
+
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  gap: $spacing-2;
+
+  color: $grey-3;
+}
+
+.title,
+.body {
+  text-align: center;
+}
