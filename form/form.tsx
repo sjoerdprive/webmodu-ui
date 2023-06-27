@@ -1,21 +1,20 @@
-import classes from "./form.module.scss";
 import classNames from "classnames";
-import { FormContext, FormFieldData } from "./formContext";
 import {
-  ChangeEvent,
   FormEvent,
   ForwardedRef,
   ReactNode,
   forwardRef,
   useCallback,
-  useMemo,
 } from "react";
 import { FieldComponent, FieldProps } from "../field/field";
+import classes from "./form.module.scss";
+import { FormContext, FormFieldData } from "./formContext";
 
 type FormProps<T> = {
   className?: string;
   formFields: FieldProps[];
   inputClassName?: string;
+  buttonLabel?: string;
   renderForm?: (formFields: FieldProps[]) => ReactNode;
   onSubmit?: (formData: FormData) => void;
   onEdit?: () => void;
@@ -27,6 +26,7 @@ export const FormComponent = forwardRef(
       className,
       formFields,
       inputClassName,
+      buttonLabel = "Save",
       renderForm,
       onSubmit,
       onEdit,
@@ -71,7 +71,7 @@ export const FormComponent = forwardRef(
                   />
                 );
               })}
-              <button>Save</button>
+              <button className={classes.submit}>{buttonLabel}</button>
             </>
           )}
         </form>

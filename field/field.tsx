@@ -61,7 +61,13 @@ export const FieldComponent = ({
         {label}
       </label>
       {renderCustomInput ? (
-        renderCustomInput({ ...field, onChange: handleChange, value, id })
+        renderCustomInput({
+          ...field,
+          onChange: handleChange,
+          value,
+          id,
+          className: classes.input,
+        })
       ) : (
         <input
           {...inputProps}

@@ -1,0 +1,61 @@
+@import "/src/styles/variables";
+
+.modal {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+
+  background-color: rgba($black, 0.8);
+
+  z-index: 9000;
+}
+
+.dialogElement {
+  border: none;
+  background-color: $white;
+
+  display: flex;
+  flex-direction: column;
+
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  padding: $spacing-1 $spacing-3;
+  border-bottom: 1px solid $grey-2;
+}
+
+.closeButton {
+  margin-left: auto;
+
+  line-height: 0;
+  padding: $spacing-1;
+
+  font-size: 16px;
+
+  color: $primary-1;
+
+  &:focus,
+  &:hover {
+    color: $primary-3;
+  }
+}
+
+.body {
+  display: flex;
+  flex-grow: 1;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+
+  padding: $spacing-3 $spacing-3;
+}
+
+.footer {
+  border-top: 1px solid $grey-2;
+  padding: $spacing-1 $spacing-3;
+}

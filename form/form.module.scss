@@ -3,10 +3,13 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: $spacing-2;
+  gap: $spacing-3;
 }
 
 .inputGroup {
   display: flex;
   flex-direction: column;
+}
+
+.submit {
 }

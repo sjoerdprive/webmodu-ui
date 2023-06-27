@@ -1,11 +1,23 @@
+@use "sass:color";
 @import "/src/styles/variables";
 
 .field {
   display: flex;
-  gap: $spacing-1;
+}
+
+.label {
+  margin-bottom: $spacing-1;
 }
 
 .input {
+  border: none;
+  resize: none;
+
+  background-color: $grey-1;
+  border-radius: $border-radius;
+
+  padding: $spacing-2;
+  font-family: $font-body;
 }
 
 .top {

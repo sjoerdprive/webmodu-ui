@@ -48,7 +48,7 @@ export const SelectComponent = ({
           {optionFromValue(value)?.label}
         </button>
       )}
-      dropDown={(dropDownProps) => (
+      dropDown={({ closeCallback, ...dropDownProps }) => (
         <List
           className={classNames(
             classes.contextMenu,
@@ -58,7 +58,10 @@ export const SelectComponent = ({
           data={options}
           itemRenderer={(item) => (
             <button
-              onClick={() => handleSelect(item)}
+              onClick={() => {
+                closeCallback();
+                handleSelect(item);
+              }}
               className={classes.listButton}
             >
               {item.label}
